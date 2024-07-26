@@ -1,25 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import HeadAppBar from './AppBar/HeadAppBar';
+import MainPage from './MainConteiners/MainPage';
+import AboutProjectsPage from './MainConteiners/AboutProjectsPage';
+import Box from '@mui/material/Box';
 
 function App() {
+
+  const [currentPage, setCurrentPage] = useState<number>(0);
+
+  const handlePageChange = (pageIndex: number) => {
+    setCurrentPage(pageIndex);
+  };
+
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 0:
+        return <MainPage />;
+      case 1:
+        return <AboutProjectsPage />;
+      default:
+        return <MainPage />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <CssBaseline />
+      <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+        <HeadAppBar onButtonClick={handlePageChange} />
+
+        <Box sx={{flex: 1, display: 'flex', flexDirection: 'column'}}>
+          <Container fixed maxWidth="xl" sx={{ flex: 1, backgroundColor: "rgba(245,245,220, .85)" }}>
+            {renderPage()}
+          </Container>
+        </Box>
+      </Box>
+    </>
+
   );
 }
 
