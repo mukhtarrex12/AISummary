@@ -39,8 +39,8 @@ const HeadAppBar: React.FC<ResponsiveAppBarProps> = ({ onButtonClick }) => {
                     </Grid>
                     <Grid item xs={isMobile ? 12 : 'auto'} sx={{ textAlign: isMobile ? 'center' : 'right' }}>
                         <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'flex-end' : 'center', justifyContent: isMobile ? 'center' : 'flex-end' }}>
-                            <Button color="inherit" onClick={() => onButtonClick(0)}>Главная</Button>
-                            <Button color="inherit" onClick={() => onButtonClick(1)}>Проекты</Button>
+                            <Button color="inherit" sx={{fontWeight:"500", fontSize: "18px"}} onClick={() => onButtonClick(0)}>Главная</Button>
+                            <Button color="inherit" sx={{fontWeight:"500", fontSize: "18px"}} onClick={() => onButtonClick(1)}>Опыт</Button>
                             <Typography variant="h6" component="div" sx={{ marginLeft: isMobile ? 0 : '80px', marginTop: isMobile ? 1 : 0 }}>
                                 {time}
                             </Typography>

@@ -6,6 +6,7 @@ import HeadAppBar from './AppBar/HeadAppBar';
 import MainPage from './MainConteiners/MainPage';
 import AboutProjectsPage from './MainConteiners/AboutProjectsPage';
 import Box from '@mui/material/Box';
+import ExperiencePage from './MainConteiners/ExperiencePage';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
       case 0:
         return <MainPage />;
       case 1:
-        return <AboutProjectsPage />;
+        return <ExperiencePage />;
       default:
         return <MainPage />;
     }
@@ -31,11 +32,11 @@ function App() {
     <>
 
       <CssBaseline />
-      <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', overflow: 'auto' }}>
         <HeadAppBar onButtonClick={handlePageChange} />
 
-        <Box sx={{flex: 1, display: 'flex', flexDirection: 'column'}}>
-          <Container fixed maxWidth="xl" sx={{ flex: 1, backgroundColor: "rgba(245,245,220, .85)" }}>
+        <Box sx={{flex: 1, display: 'flex', flexDirection: 'column', backgroundColor: "#EDEEF0"}}>
+          <Container fixed maxWidth="xl" sx={{ flex: 1, backgroundColor: "#EDEEF0" }}>
             {renderPage()}
           </Container>
         </Box>
