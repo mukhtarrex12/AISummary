@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/AISummary/static/css/main.e83865cb.css",
-    "main.js": "/AISummary/static/js/main.754edcd7.js",
+    "main.css": "/AISummary/static/css/main.22c3df51.css",
+    "main.js": "/AISummary/static/js/main.8ec81dd1.js",
     "static/js/453.8634cc02.chunk.js": "/AISummary/static/js/453.8634cc02.chunk.js",
-    "static/media/BackgroundPaper.png": "/AISummary/static/media/BackgroundPaper.28d85fe3e207967d1239.png",
-    "static/media/BackgroundMainPaper.png": "/AISummary/static/media/BackgroundMainPaper.14ebf127e8da873042e0.png",
+    "static/media/BackgroundPaper.jpeg": "/AISummary/static/media/BackgroundPaper.13dd4519776b58d67d96.jpeg",
+    "static/media/BackgroundMainPaper.jpeg": "/AISummary/static/media/BackgroundMainPaper.ad1134923e5528e89c80.jpeg",
     "index.html": "/AISummary/index.html",
-    "main.e83865cb.css.map": "/AISummary/static/css/main.e83865cb.css.map",
-    "main.754edcd7.js.map": "/AISummary/static/js/main.754edcd7.js.map",
+    "main.22c3df51.css.map": "/AISummary/static/css/main.22c3df51.css.map",
+    "main.8ec81dd1.js.map": "/AISummary/static/js/main.8ec81dd1.js.map",
     "453.8634cc02.chunk.js.map": "/AISummary/static/js/453.8634cc02.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e83865cb.css",
-    "static/js/main.754edcd7.js"
+    "static/css/main.22c3df51.css",
+    "static/js/main.8ec81dd1.js"
   ]
 }
