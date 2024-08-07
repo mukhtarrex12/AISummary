@@ -2,11 +2,14 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 
-import backgroundImg from '../Pictures/BackgroundMainPaper.png';
+import backgroundImg from '../Pictures/BackgroundMainPaper.jpeg';
 import { Box } from "@mui/material";
 
-export default function MainPage() {
+import { useTranslation } from 'react-i18next';
 
+
+export default function MainPage() {
+    const { t } = useTranslation();
 
     return (
         <Paper elevation={3} sx={{
@@ -19,56 +22,56 @@ export default function MainPage() {
             overflow: 'hidden'
         }}>
 
-            <Typography variant="h2" sx={{ mt: 12, fontWeight: 'bold', textAlign: "center" }}>
-                Hi. I'm Azat Iskakov
+            <Typography variant="h2" sx={{ mt: 6, fontWeight: 'bold', textAlign: "center" }}>
+                {t('greeting')}
             </Typography>
 
-            <Grid container spacing={5} sx={{ mt: 6, width: '90%', paddingBottom: "54px" }}>
+            <Grid container spacing={5} sx={{ mt: 2, width: '90%', paddingBottom: "38px" }}>
 
                 <Grid item xs={12} md={6}>
                     <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: "38px", color: "#00A6A0" }}>
-                        About me
+                        {t('aboutMe')}
                     </Typography>
                     <Typography variant="h6" sx={{ mt: 4 }}>
-                        Я разработчик на C#. Занимаюсь созданием и поддержкой приложений на платформе .NET и .NET Framework, включая веб-приложения и сервисы.
+                        {t('aboutMeText1')}
                     </Typography>
                     <Typography variant="h6" sx={{ mt: 2 }}>
-                        Основные технологии: .NET, React, TypeScript, GraphQL, PostgreSQL .
+                        {t('aboutMeText2')}
                     </Typography>
                     <Typography variant="h6" sx={{ mt: 2 }}>
-                        Создал с нуля проекты "WOLWEB" (управление удалённым питанием компьютеров и сбор аппаратной информации) и "WEBCAM" (приложение для просмотра Live с IP камеры через браузер).
+                        {t('aboutMeText3')}
                     </Typography>
 
                     <Typography variant="h6" sx={{ mt: 6 }}>
-                        Также в мои обязанности входит системное администрирование, где я Занимаюсь: монтажом и обслуживанием компьютерной техники, устранение ошибок и неполадок в операционной системе Windows, поддержка домена и серверов лицензий, MECM (бывший SCCM), Kaspersky, ADFS, Autodesk и других корпоративных решений.
+                        {t('aboutMeText4')}
                     </Typography>
                 </Grid>
 
 
                 <Grid item xs={12} md={6} sx={{ textAlign: 'right' }}>
                     <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: "38px", color: "#00A6A0" }}>
-                        Details
+                        {t('details')}
                     </Typography>
 
                     <Typography variant="h5" sx={{ fontWeight: 'bold', mt: 4 }}>
-                        Возраст
+                        {t('age')}
                     </Typography>
                     <Typography variant="body1" sx={{ mt: 1 }}>
-                        24 года.
+                        {t('ageText')}
                     </Typography>
 
                     <Typography variant="h5" sx={{ fontWeight: 'bold', mt: 4 }}>
-                        Город проживания
+                        {t('city')}
                     </Typography>
                     <Typography variant="body1" sx={{ mt: 1 }}>
-                        Планета Земля, Республика Казахстан, Город Усть-Каменогорск
+                        {t('cityText')}
                     </Typography>
 
                     <Typography variant="h5" sx={{ fontWeight: 'bold', mt: 4 }}>
-                        Цель
+                        {t('goal')}
                     </Typography>
                     <Typography variant="body1" sx={{ mt: 1 }}>
-                        Стать senior C# разработчиком
+                        {t('goalText')}
                     </Typography>
 
                 </Grid>
@@ -91,13 +94,14 @@ export default function MainPage() {
                     style={{
                         width: '100%',
                         height: 'auto',
-                        maxHeight: '100vh',
+                        maxHeight: '100%',
                         objectFit: 'cover',
                         position: 'absolute',
-                        top: 0,
+                        bottom: 0,
                         left: 0,
-                        borderRadius: "5px"
+                        borderRadius: "7px"
                     }}
+                    
                 />
             </Box>
 

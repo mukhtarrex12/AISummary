@@ -5,63 +5,29 @@ import StepLabel from '@mui/material/StepLabel';
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 
-import backgroundImg from '../Pictures/BackgroundPaper.png';
+import backgroundImg from '../Pictures/BackgroundPaper.jpeg';
+import { useTranslation } from "react-i18next";
 
-const steps = [
-    {
-        label: 'Февраль 2022 - май 2022',
-        Jobtitle: "Android разработчик",
-        description: 'Разработка мобильного приложения "Личный кабинет студента" для операционной системы Android на Java'
-    },
-    {
-        label: 'Сентябрь 2022 - Август 2024',
-        Jobtitle: "Разработчик C#/Системный администратор",
-        description: 'Поддержка внутренних проектов на .NET и .NET Framework, а так же разработка собственных проектов: "WOLWEB" и "WEBCAM". Монтаж и обслуживание компьютерной техники, устранение ошибок и неполадок в Windows, поддержка домена и серверов лицензий, MECM, Kaspersky, ADFS, Autodesk и др.'
-    },
-    {
-        label: '2024 год',
-        Jobtitle: "Разработчик C#",
-        description: 'Цель: позиция C# разработчика',
-
-    },
-];
-
-const stepsTeach = [
-    {
-        label: 'Сентябрь 2018 - Июнь 2022',
-        Jobtitle: "Бакалавриат в ВКТУ",
-        description: 'Специальность: Школа информационных технологий и интеллектуальных систем, Вычислительная техника и программное обеспечение'
-    },
-    {
-        label: 'Сентябрь 2022 - июнь 2024',
-        Jobtitle: "Магистрант в ВКТУ",
-        description: 'Специальность: Школа информационных технологий и интеллектуальных систем, Вычислительная техника и программное обеспечение'
-    }
-];
-
-const Additionaleducation = [
-    {
-        label: '2024 год',
-        Jobtitle: "Проводившая организация: Google",
-        description: 'Google Cloud / ML learning'
-    },
-    {
-        label: '2024 год',
-        Jobtitle: "Яндекс Практикум",
-        description: 'Основы работы с Git'
-    }
-];
+interface StepperArray {
+    label: string;
+    Jobtitle: string;
+    description: string;
+}
 
 export default function ExperiencePage() {
 
-
+    const { t } = useTranslation();
+    const steps : StepperArray[] = t('experience.steps', { returnObjects: true }) as StepperArray[];
+    const stepsTeach : StepperArray[] = t('experience.stepsTeach', { returnObjects: true }) as StepperArray[];
+    const additionalEducation : StepperArray[] = t('experience.additionalEducation', { returnObjects: true }) as StepperArray[];
+    
     return (
         <Paper elevation={3} sx={{
             height: 'auto',
             display: "flex",
-            justifyContent: "center", 
-            alignItems: "center", 
-            alignContent: "center", 
+            justifyContent: "center",
+            alignItems: "center",
+            alignContent: "center",
             flexDirection: "column",
             paddingBottom: "32px",
             overflow: 'hidden',
@@ -76,6 +42,7 @@ export default function ExperiencePage() {
                     left: 0,
                     width: '100%',
                     height: '30%',
+                    minHeight: "180px"
                 }}
             />
 
@@ -86,7 +53,7 @@ export default function ExperiencePage() {
 
                 <Grid item xs={12} md={6}>
                     <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: "30px", color: "#00A6A0", marginBottom: "8px" }}>
-                        Опыт работы
+                        {t('experience.myexperience')}
                     </Typography>
                     <Stepper orientation="vertical">
                         {steps.map((step, index) => (
@@ -104,7 +71,7 @@ export default function ExperiencePage() {
 
                 <Grid item xs={12} md={6}>
                     <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: "30px", color: "#00A6A0", marginBottom: "8px" }}>
-                        Образование
+                        {t('experience.education')}
                     </Typography>
 
                     <Stepper orientation="vertical">
@@ -120,11 +87,11 @@ export default function ExperiencePage() {
                     </Stepper>
 
                     <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: "30px", color: "#00A6A0", marginBottom: "8px", paddingTop: "48px" }}>
-                        Дополнительное образование
+                        {t('experience.additionaleducation')}
                     </Typography>
 
                     <Stepper orientation="vertical">
-                        {Additionaleducation.map((step, index) => (
+                        {additionalEducation.map((step, index) => (
                             <Step key={index} active={true}>
 
                                 <StepLabel >{step.label}</StepLabel>
