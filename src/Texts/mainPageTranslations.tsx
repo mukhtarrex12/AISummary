@@ -10,7 +10,7 @@ const mainPageTranslations = {
         age: "Age",
         ageText: "24 years old.",
         city: "City of residence",
-        cityText: "Planet Earth, Republic of Kazakhstan, Ust-Kamenogorsk",
+        cityText: "Planet Earth, Republic of Kazakhstan, Astana",
         goal: "Goal",
         goalText: "Become a senior C# developer"
     },
@@ -25,7 +25,7 @@ const mainPageTranslations = {
         age: "Возраст",
         ageText: "24 года.",
         city: "Город проживания",
-        cityText: "Планета Земля, Республика Казахстан, Город Усть-Каменогорск",
+        cityText: "Планета Земля, Республика Казахстан, Город Астана",
         goal: "Цель",
         goalText: "Стать senior C# разработчиком"
     }
