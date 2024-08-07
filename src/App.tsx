@@ -41,11 +41,10 @@ function App() {
                 <Box sx={{ position: 'sticky', top: 0, zIndex: 1100 }}>
                     {
                         isMobile ? (
-                            <HeadAppBar onButtonClick={handlePageChange} />
+                            <MobileHeadAppBar onButtonClick={handlePageChange} />
                         ) :
                             (
-                                <MobileHeadAppBar onButtonClick={handlePageChange} />
-
+                                <HeadAppBar onButtonClick={handlePageChange} />
                             )
                     }
                 </Box>
