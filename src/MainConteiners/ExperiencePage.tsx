@@ -12,6 +12,7 @@ interface StepperArray {
     label: string;
     Jobtitle: string;
     description: string;
+    PlacesOfWork?: string;
 }
 
 export default function ExperiencePage() {
@@ -57,10 +58,11 @@ export default function ExperiencePage() {
                     </Typography>
                     <Stepper orientation="vertical">
                         {steps.map((step, index) => (
-                            <Step key={index} active={index !== steps.length - 1}>
+                            <Step key={index} active={index !== steps.length}>
 
                                 <StepLabel >{step.label}</StepLabel>
-                                <Typography variant="h6" sx={{ mt: 1, fontWeight: 'bold' }}>{step.Jobtitle}</Typography>
+                                <Typography variant="h6" sx={{ mt: 1, fontWeight: 'bold' }}>{step.PlacesOfWork}</Typography>
+                                <Typography variant="h6" sx={{ mt: 1 }}>{step.Jobtitle}</Typography>
                                 <Typography variant="body1" sx={{ mt: 1 }}>{step.description}</Typography>
 
                             </Step>
@@ -93,11 +95,9 @@ export default function ExperiencePage() {
                     <Stepper orientation="vertical">
                         {additionalEducation.map((step, index) => (
                             <Step key={index} active={true}>
-
                                 <StepLabel >{step.label}</StepLabel>
                                 <Typography variant="h6" sx={{ mt: 1, fontWeight: 'bold' }}>{step.Jobtitle}</Typography>
                                 <Typography variant="body1" sx={{ mt: 1 }}>{step.description}</Typography>
-
                             </Step>
                         ))}
                     </Stepper>
